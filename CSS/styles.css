@@ -1,0 +1,43 @@
+  h1{
+            background-color: brown;
+            color: blue;
+        }
+        div h1 {
+            color: white;
+        }
+
+
+
+        .parent{
+            padding: 30px;
+            background-color: rgb(226, 129, 226);
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+        .firstcomponent{
+            background-color: aqua;
+        }
+        #ingredients{
+            font-size: 12px;
+            font-weight: 900;
+            color: bisque;
+        }
+     /*  .firstclass a{
+
+      }
+      .secondnav li{
+
+      } */
+       button{
+        background-color: red;
+        padding:20px;
+        color: white;
+       }
+       button:active{
+        background-color: blue;
+        transform: scale(1.2);
+       }
+     input[type="text"]{
+        color: red;
+        border:2px solid blue;
+     }

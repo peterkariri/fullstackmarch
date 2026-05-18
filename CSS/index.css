@@ -1,0 +1,207 @@
+css refers to cascading style sheet and it is used to style elements in a webpage 
+it follows a few rules {
+    cascading >>refers to executing styles one by one in a linear sequence {
+        example >>if a style is declared in line 10 on a particular tag then the same tag is targetted with new styles 
+        on line 1000
+    }
+    specificity>>this means that sme of the selectors used in css and rules are more high up in hierachy 
+    then other rules /selectors {
+        selectors 
+        important! rule >>this is a fixed style rule that makes sure that the css style declared cannot 
+        be overwritten unless its importantly declared 
+    }
+
+    inheritance >>some properties in other css block are inherited from the parent 
+
+
+}
+
+to define css we use a ccs code block defined as follows {
+    selector >>this is the main point of linkage between css and html tags 
+    code block defined by the curly brackets 
+    property>>which defines the style component we want to change 
+    value >>defined by what degree or change do we want to syle the property 
+
+    the property and value are seperated via a colon and terminated via a semicolon;
+
+    h1{
+        background-color: antiquewhite;
+    }
+}
+
+css can be embedded. in three ways namely {
+    inline css>this is css used in line with html tags ,we use the style attribute in the opening tag of html
+    for inline css we dont use selectors we use the property and value in the opening tag seperated via semicolon
+    {
+        <h1 style="background-color: antiquewhite; color: red;" ></h1>
+    }
+    internal css>>this is css used in the html body embedded using the style tag <style></style>
+    any code that goes inside the style tag is executed linearly with html 
+    we put this in the head tag or as well in the body tag 
+    its not advised because css can be t lenghty and with complitation been linealry it will slow your site down 
+    
+    <style>
+     h1{
+        background-color: antiquewhite;
+    }
+    </style>
+
+        external css>>we create an external css file with an extension .css \
+        and link it to html via the head tag using the link tag 
+
+
+}
+selectors>>this are the point of linkavge bewtween html and css 
+the selectors are defined in the html tags inline with the opening tag 
+this selectors include{
+    universal selector>>this is defeined via the asteric symbol and it is used to
+     select everything in a html document for styling 
+    *{
+        //properties here 
+    }
+    tag/element selector>>this selector is defined by the tagname and it is 
+    used to style tags declared (p,h1,div,span)
+    if you want to style a single style in your webpage with the same style
+     targetting the same tag we use tag selector{
+        same font color,background, to h1 ,
+        p{
+            //code here
+        }
+        span{
+            //code here
+        }
+    }
+
+    class selector>>this is used to style most css features as it
+     targets html tags directly or unisonly {
+        a single class can belong to many tags or many tags can
+         belong to many classes or a single tag can have many classes 
+        defined by the dot notation while access the selecotr in
+         css and in html defined by declaring the class atribute in 
+        opening tag of html 
+        .parent{
+            //code goes here 
+        }
+        NB>>WITH THIS WE ENFORCE DRY RULE(DO NOT REPEAT YOURSELF)
+    }
+}
+ID SELECTOR>>this is a selector that specifically styes a
+ single element and its more specific than class selector 
+mostly it is used to link css to html as well as to js 
+ths selector is defined using the id attribute in html 
+and using the hash symbol 
+#selector{
+//code goes here
+}
+//wednesday
+
+descendant selector >>this is a selector used to select children in side a parent container {
+    we use this for simplicity and specificity to avoid selecting all elements of the same tag 
+    we space the tag names until we reach the element thayt we need
+select the parent and then target the child element/descendant with a spacce in between them 
+
+    nav ul li a{
+
+    }
+
+    nav a{
+
+    }
+
+    .firstnav a{
+
+    }
+}
+immediate child selector>>selects the first child only of a pranet container ulike the 
+plain descendant selector which slects all children 
+it is defined by having a greater than symbol in between the parent seletor and the child selector 
+
+.firstnav>a{
+    //immediate child selector 
+}
+
+psuedoclass class selector{
+    this selectors allow. one to enforce some transitions and animations to choosen elements 
+    they are defined by first styinng using a normal css block then redefining the same block with the said pseucoclass selecotr 
+    they include >active>>does operarions once something is cliked and acitve (form)
+    hover>>does an operation once you hver on something
+}this selectors are seperated via a full colon 
+
+attribute selector>>this selectors are used ot style attributes in html (form attributes)
+they use square brackets and the name of the attribute to be styles 
+input[type="submit"]{
+    
+}
+//Text properties
+this prpoperties are used to style text content in html thay include {
+    //fonts 
+
+    font>>which isused to define the font type been used 
+    font-family: also denotes the type of font family the font belongs to ;
+    font-size>>this gives the size of the font in measurement(px.,em)
+    color>>this is used to give the color to fonts
+
+    //alignmnets of text >>refers to the orientation/strucutre of text
+    its aligned into a few stlyes namely {
+        :left>>alining text to start on the left margin side
+        :right>>refres to aligning text to start on the right margin side
+        center>>ext is strucutred in the center with uneven lines(hereditsry format)
+        justify>>to make sure the text starts at the same start point in the right side 
+    }
+}
+//measurement properties>>this refers to how elements size and lenght are defined 
+we have various measurements methods relative and non-relative
+relative measurementunits are used to perfeclty quantify the size of dynamic elements(%.e,,rem)
+non-relative measurement units are used to quantity static sizes(px,vh,vw)
+px>>this is used ot denoted by the size of  text ,width and non reltive units 
+em>>this refers to relative meausremtn in relation to the root elemetn (16px)
+
+1em=16px
+
+for [percentiles we use to style dynamic tings >>width,height,some border]
+
+vh >>makes sure that the entire page fits on screen from top to bottom 
+vw>>this makes sure that the entire page fits on screen from left to rigth 
+
+//color properties {
+    thisvalues allow one to give color to properties
+    one can define color in three ways {
+        there is a combination of 256 colors 
+
+        rgb(red green blue ) color method that denotes colors based on the rgb value(0>255){
+            there are three paramenter 
+            the color numbers are sepetared via a comma
+
+            color:rgb(123,244,345);
+        }
+
+        hex method >{
+            in this method we use a combnation of hex color codes 
+            we start with the hach symbol then the characters
+
+            color:#0000
+        }
+
+        hsl(hue ,saturation and luminace){
+            we also have three numbers ,denote the extensiveness of the colors to be used 
+            this is defined in percentile from 0 %to 100 % for two values and the first value is in degrees(0-360)
+        }
+
+        the normal naming word color>>this is just by declaring gthe color name 
+    }
+
+    to access the colors you want for a client we use the color picker online platform
+
+}
+
+box -model {
+    margin: ;
+    padding: ;
+    //border {
+
+}
+}
+
+//background properties
+
+//displays

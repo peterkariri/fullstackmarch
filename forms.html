@@ -1,0 +1,192 @@
+<!-- forms allow us to collect data and interact with the user. 
+They are an essential part of web development and are used for various purposes, 
+such as user registration, login, feedback collection, and more. 
+In this section, we will explore the basics of HTML forms and how to create them.
+
+
+forms have various tags {
+    form tag>>which is used to enclose the form itself and contains 
+    attributes such as action(the database location you are sending the data ) and method(post,get)
+    text area>>which is used to create a multi-line input field for users to enter text.
+    field set>>used to enclose related form elements and provide a visual grouping for them.
+    legend>>used to provide a caption for the field set.
+}
+form tags{
+    they include {
+        label>>this is used to provide a description of what the inout type is collecting 
+        the label has the for attribute which should be the same name as the id attribute of the inoout type 
+        so that to kink the two pairs together 
+        <label for="samenameas id of input"> label name:</label>
+    }
+    {
+        input type>>refers to the actual field where the user will enter data. and the type of data the user enters 
+        it has various attributes that are used {
+            the attribute that descibess the input,the name attribute,the id attribute, the value attribute, 
+            the placeholder attribute, the required attribute, and more.
+        }
+    }
+    input type is an inline level element and to convert it
+     to a block level element for proper partitioning we use <div></div>
+     every pair of an iput with a label shuld be enclosed in a div to make 
+     the form more organized and easier to read.
+     <input type="typeofinput" id="name" name="name" placeholder="Enter your name">
+
+
+     types of input{
+        text>>used for single-line text input.
+        password>>used for password input, where the characters are masked.
+        email>>used for email address input, which validates the format of the email.
+        number>>used for numeric input, which allows only numbers to be entered.
+        date>>used for date input, which provides a date picker for users to select a date.
+        checkbox>>used for multiple selections, where users can check one or more options.
+        radio>>used for single selection, where users can select only one option from a group.
+        submit>>used to submit the form data to the server.
+        reset>>used to reset the form fields to their default values.
+     }
+} -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="localhost" method="">
+        //to collect sign up data(first name,second name,email ,password,confirm password,phone number ,submit)
+        <div>
+            <label for="fname">First Name</label>
+            <input type="text" name="firstname" id="fname" required>
+        </div>
+        <div>
+            <label for="sname">Second Name</label>
+            <input type="text" name="secondname" id="sname" required>
+        </div>
+        <div>
+            <label for="mail">Email</label>
+            <input type="email" name="useremail" id="mail" required>
+        </div>
+        <div>
+            <label for="pssword">Password</label>
+            <input type="password" name="password" id="pssword" required>
+        </div>
+        <div>
+            <label for="cpass">Confirm Password</label>
+            <input type="password" name="confirmpass" id="cpass" required>
+        </div>
+        <div>
+            <label for="pnumber">Phone Number</label>
+            <input type="text" id="pnumber" name="phone" required>
+        </div>
+        <div>
+            <button type="submit">Sign Up</button>
+        </div>
+    </form>
+
+
+    //we have other components that are used in forms  and other input types 
+
+    <!-- radio>>we use this when we want a single select option in the selection between choices  
+    {
+        WE LINK RELATED SELECTIONS with the name attribute 
+        value attribute is used to set a static value in the webpage 
+    }
+ -->
+    <div>
+        <label for="gselect">Choose Gender</label> <br>
+        <input type="radio" name="gender" id="male" value="Male">Male 
+        <input type="radio" name="gender" id="female" value="Female">Female
+        <input type="radio" name="gender" id="Notdisclosing" value="Prefer not To Say">Prefer Not to Say
+    </div>
+
+
+    <!-- //the opposite of a radio input type is a checkbox becuase it allows multiple selection of items 
+    in this selection one can select as many options as possible  -->
+     <div>
+        <h1>Choose your Hobbies</h1>
+         <label for="swim">Swimming</label>
+         <input type="checkbox" name="swimming" id="swim">
+         <br>
+         <label for="run">Running</label>
+        <input type="checkbox" name="running" id="run">
+        <br>
+           <label for="code">Coding</label>
+        <input type="checkbox" name="codding" id="code">
+        <br>  
+         <label for="game">Gaming</label>
+        <input type="checkbox" name="gaming" id="game">
+
+
+
+
+     </div>
+
+  <!--    select tag also handles a selection
+      of fixed values from a dropdownlist (this is used in navigations that have sub pages 
+      )and other platforms that need you to 
+      select data from a fixed database 
+      we have the select tag that has the option values with predefined values to select from 
+      the first otpion value tag is the default select option 
+      you can only select one option
+      -->
+<!--   //select coutries in east Africa
+ -->     
+<select name="countries" id="country">
+    <option value=""></option>
+    <option value="Kenya">Kenya</option>
+    <option value="Tanzania">Tanzania</option>
+    <option value="Uganda">Uganda</option>
+    <option value="Rwanda">Rwanda</option>
+    <option value="Burundi">Burundi</option>
+    <option value="Ethiopia">Ethiopia</option>
+    <option value="Somali">Somali</option>
+    <option value="DRC">DRC</option>
+    <option value="Sudan">Sudan</option>
+</select>
+//datalist tag >>this tag is an upgrade fro the select tag in that its highly flexible.and allows custom values 
+//it is widely used in ecommerce,selecting countries from an api ,doing a search 
+//it loops through the characters that are been search and mathses them with the ones that are defines statically or dynamicalluy 
+//it uses a list sttribute in the input type to link to the datalist tag id
+//we use option values >>we dont define the static values  AND IT DOES NOT HAVE THE CLOSING TAG OF THE OPTION VALUE 
+
+<div>
+    <h2>choose your browser</h2>
+    <input type="text" name="browser" id="browse" list="browsers">
+
+    <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Mozilla">
+            <option value="Edge">
+            <option value="Safari">
+            <option value="Brave">
+            <option value="Opera Mini">
+                <option value="bing">
+    </datalist>
+</div>
+
+tables are used to define the strucutred approach of content 
+they include table tag ,table row ,table heading ,table data 
+
+<table>
+    <tr>
+        <th>Name</th>
+        <td>Peter Njuguna</td>
+    </tr>
+     <tr>
+        <th>Course</th>
+        <td>Software Engineering</td>
+    </tr> <tr>
+        <th>Email</th>
+        <td>peter@eldohub.co.ke</td>
+    </tr> <tr>
+        <th>Location</th>
+        <td>Eldoret</td>
+    </tr>
+
+</table>
+
+
+
+</body>
+</html>

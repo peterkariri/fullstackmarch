@@ -1,0 +1,43 @@
+<!-- they allow us to differentiate what tags to use and where to use them 
+inline level elements >>this are elements that occupy only the space 
+with content and they span to the end of the device width 
+{
+    span,i,b,strong,em,li,a,img
+}
+block level elements are elements that occupy the entire width and start on a new line {
+    p,h1...h6,div ,all semantic tags are block level elements
+}
+    you can only have block level elemetns continaing other block level elements but 
+    you cannot have inline level elements containing block level elements
+     but you can have inline level elements containing other inline level elements
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <span style="background-color: red;">
+        hello i am span
+    </span>
+
+    <div style="background-color: magenta; padding: 20px;">
+        <h2 style="background-color: yellow;">Hello i am div</h2>
+    </div>
+
+    
+<h1 style="background-color: green;">i a heading in <i> <strong>italicized</strong></i></h1>
+    
+<div class="parent">
+
+    <div class="first-child">
+        <div class="last-child">
+
+        </div>
+    </div>
+</div>
+ </body>
+ </html>
