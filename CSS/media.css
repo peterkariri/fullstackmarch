@@ -1,0 +1,15 @@
+media queries are used to define responsive design for different screen sizes and devices. Here are some common media queries:
+they do htis by defining breakpoints which are specific screen widths where the layout of the website changes to better fit the device being used.
+we can navigate from desktop to mobile  and mobile to desktop by using media queries to adjust the layout and styling of the website accordingly.
+this is doen bythe keyword 
+@media (min-width: 340px)    {
+  /* CSS rules for mobile devices */
+  body{
+    
+  }
+    
+}
+@media (max-width: 768px) {
+  /* CSS rules for desktop devices */
+}
+inside the media block is whgere you write css rules of how you want to strucutre the apllication 

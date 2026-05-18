@@ -157,7 +157,8 @@ px>>this is used ot denoted by the size of  text ,width and non reltive units
 em>>this refers to relative meausremtn in relation to the root elemetn (16px)
 
 1em=16px
-
+  n 
+  
 for [percentiles we use to style dynamic tings >>width,height,some border]
 
 vh >>makes sure that the entire page fits on screen from top to bottom 
@@ -193,7 +194,7 @@ vw>>this makes sure that the entire page fits on screen from left to rigth
     to access the colors you want for a client we use the color picker online platform
 
 }
-
+//monday 27
 box -model {
     margin: ;
     padding: ;
@@ -202,6 +203,146 @@ box -model {
 }
 }
 
-//background properties
+the box model reers to the structure of every element in html as it is in a rectangular box manner 
+and in that box we have various properties that categorieses it as a box model {
+    margin 
+    padding
+    border
+}
+
+margin>>this refers to the space around elements with relation to other elements 
+margin has four main variations {
+    margin-top:this refers to the space to the top of an element in relation to the element on top of it  ;
+    margin-bottom:this refers to the space to the bottom of an element in relation to the element below  it;
+    margin-left:this refers to the space to the left of an element in relation to the element on its left side.
+    margin-right:this refers to the space to the right of an element in relation to the element on its right side;
+
+    all this are defined by the measurement values we discussed (px,rem,em)
+    margin-top:30px;
+
+    this four properties and their values are used to define specific margins but we can combine them in the following ways }{
+        margin:this gives equal distribution of the specified margin acroos all sides;
+        margin:30px;
+
+        we can also give the margins in one line {
+            margin:10px 30px;
+
+            the 10px>>represents top and bottom ;
+            the 30px>>represents left and right;
+        }
+  we also use margin to center a div with the help of the width property and vakue where after reducing the width of an element we define the 
+  margin as auto,positioning the element at the center.
+  margin:auto;
+
+    }
+
+}
+
+padding>>this refers to the space between content and the border of an element {
+    this means that padding is inside an element 
+    also we have four major paddig variations{
+        padding-top:this is the space to the top of elements in relation to the elements border;
+        padding-bottom:this is the space to the bottom of elements in relation to the elements border;
+        padding-left:this is the space to the left of elements in relation to the elements border;
+        padding-right:this is the space to the right of elements in relation to the elements border;
+
+    }
+    to give an overall padding we just state {
+        padding:30px;>>gives an equal padding around the element.
+    }
+
+}
+border>>this refers to an imaginary line that seperates elements {
+    it seperates every content in the box model and also the padding and margin 
+    it has various properties{
+        border-top:the bordto the top;
+        border-bottom:border to the bottom;
+        border-left:border to the :left
+        border-right:border to the right
+    }
+    its given value via measurements where i ahve to specify the{
+        width:this gives the thickness (px) ;
+        the color:gives the color of the border
+        the nature>>this gives the outlook(solid,dashed)
+        }
+ border-top:1px solid grey;  NB>>BORDER IS A THREE COMBINATION RULE 
+  we can use the one liner for border :using the border property for all round the element border
+
+  border:2px solid blue; >>one liner
+  
+  also in border we are able to curve the edges of content ,make them in circular manner by curving the edges using a specific border property valled border radius
+  with the border radius we have four targetted elements{
+    border-top-left-radius:GIVES A CURVED edge to the top left ;
+    border-top-right-radius:GIVES A CURVED edge to the top right ;
+    border-bottom-left-radius:GIVES A CURVED edge to the bottom left ;
+    border-bottom-right-radius:GIVES A CURVED edge to the bottom right ;
+
+  }
+to curve everything in a one liner we define border-radius and give the value 
+
+border-radius:20px;
+
+ to curve a div into a circle we use the relative measurements (%)IN THE BORDER RADIUS 
+  
+ border-radius:100%;
+}
 
 //displays
+this refers to the layout of elemnts and content in the application {
+    with display we are able to style elements in the webpage 
+    ideally when creating a wireframe we define the strucutre of elements and with displays we are able to attain this strucutre 
+}
+
+displays include{
+    block:this arranges elements in a top down manner (column manner staccked together >>by dafaule elemtns are in a display block )
+    inline >>this arranges elements in a single line to the right
+    inline-block >>elemen ts are in an inline manner but are flexible to have a changable width 
+    grid: now with this it uses the grid system(template rows and template colums with mathematics indexes to define how the columns and rows are going to span {
+        grid-template-columns: 1fr 1fr 3fr ;
+      grid-templaterows:this is for rows 
+    });
+
+    flex:this is the flexible display property that allows one to create flexible containers which are {
+        flexible 
+        responsive 
+        easy to learn 
+
+    }
+    first we define the display set to flex then we define other properties
+    by default a flex in inline
+    flex properties{
+        direction >>>with direction we are able to define where our flex container will be directed to {
+             column>{
+              column:which displays elements in a column
+              column-reverse:which display the elements in a column but in a reverse manner 
+             }
+             row{
+                row>>which is the default flex direction 
+                row-reverse>>which changes the direction to a reverse of the row 
+
+             }
+             when we need to seperate elemets wih flex we use the gap property or the justify content property {
+                gap:tis creates a space with the said measurements{
+                    gap:20px;
+                }
+                justify-content{
+                    we justify-content in three ways{
+                        space-between>this gives an equal space between the contents in te flex box>only works when the flex container has two elements
+                        space-around:this gives equal spacing around every element in the container{
+                            in an ecommerce platform 
+                        }
+                        space-evenly>>this leavrs even spaces betweenelements and their border
+                    }
+                }
+             }
+             when you want to align elements to the center we use the align-items property and set it to center 
+        }
+    }
+
+    flex-wrap>>this wraps elemetns in a flex container to avoid distortion and to creates responsiveness 
+    it has  varous properties {
+        flex-wrap:wrap;
+        flex-wrap: nowrap; removes the wrapping 
+        flex-wrap: wrap-reverse; wrapps elements in a reverse manner 
+    }
+}
