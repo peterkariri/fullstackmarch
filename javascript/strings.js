@@ -53,3 +53,6 @@ console.log(newYear.startsWith("i"));
 
 //endsWith>>retunds  a boolean if a search os found 
 
+
+
+//join ,substirng ,slice ,reduce ,concat,filter 
