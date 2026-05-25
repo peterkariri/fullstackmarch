@@ -55,4 +55,54 @@ console.log(newYear.startsWith("i"));
 
 
 
-//join ,substirng ,slice ,reduce ,concat,filter 
+//join ,substring ,slice ,
+
+/* substring >>this is the extraction of a part of a string that is different from the original string
+subtrings works in indexes in which we have a starting index and an end index 
+both substring and slice are used together to extract string components 
+the only difference with the two is that slice works also with arrays while substirng only works with strings 
+also slice takes in negative indexes while subtring only takes in positive indexes(incase you pass a negative index 
+    to a subtring it returns zero 
+    the meaning of a negative indexes that it starts counting from the right side 
+) */
+
+let newWeek='This week has a lot of Holidays '
+
+let result=newWeek.substring(5,10)
+
+console.log(result);
+
+let result2=newWeek.slice(-30)
+ result2=newWeek.slice(1,20)
+
+console.log(result2);
+
+let email='johnstoneweidero@gmail.com'
+
+let nameEmail=email.slice(0,email.indexOf("@"))
+
+console.log(nameEmail);
+
+
+
+/* for join this is used to join a set of array characters into stirngs with a delimeter 
+for this items should be arrays to work  */
+
+let fruits=["mangoes","oranges","bananas","Lemon","cabbage"]
+
+let fruitResult=fruits.join("-")
+
+console.log(fruitResult);
+
+//putting hash infront of fruits 
+
+let fruitResult2= "#" + fruits.join("#")
+
+console.log(fruitResult2);
+
+
+
+
+
+
+
