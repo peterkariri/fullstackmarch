@@ -51,6 +51,38 @@ console.log(sentence);
 
 console.log(fruits.length);
 
+//includes
+//this method is used to search if an item is included in the array 
+
+//indexoff..RETUNS THE index of the item selected 
+
+let students=["Neema",'Jacob',"Marion","Trevor","Basil","Bannis","Griffin","Masters","Francis"]
+
+let newAnswer=students.includes("jacob")
+
+newAnswer=students.indexOf("Neema")
+
+
+console.log(newAnswer);
+
+//THey take an existing array and do some operatinto to it to return a new array based on the logic that has been given 
+
+//map
+let numbers=[2,4,6,34,545,232,453,5]
+ 
+let result=numbers.map((number)=>{
+  return number *4
+})
+
+console.log(result);
+
+
+//filter
+let result2=numbers.filter((number)=>{
+    return number>300
+})
+console.log(result2);
+
 
 
 
