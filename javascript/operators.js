@@ -83,3 +83,36 @@ console.log(mult);
     console.log("change data type explicitly ");
     
   }
+
+/*   logical operators >>they allow 
+  logical computations to be exececuted (two exeutions in parallel ,authtentication ) 
+  WE refer to them as Logi gates
+  they include  
+  logical AND,>>this exclussivley evaluates to a true(1+1=1)>>1 is a true (true 
+  +true =true ) 
+  this is shpwn by &&(username && password === the one stored in database 
+  successfull logic
+
+  LOGICAL NOT 
+  ,LOGICAL OR>>which for execution only one of the variables should be true
+   (1 + 0=1),0+1=1
+  {
+  if(driver licence || nationalcredentils == credentils in user profile )
+  apply for a visa 
+  }
+  the or is shown by || 
+
+
+  the logical not (!) is used to negate the logicial AND AND OR ,YOU PREFIX
+   THE EXCLAMATIONMARK BEFORE THE 
+  VALUES 
+
+  NOT EQUAL TO {
+  !==
+  }
+  With logical gates we use them for software eng ,hardware eng 
+  */
+//conditonal statements
+  
+
+
