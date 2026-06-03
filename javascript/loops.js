@@ -63,3 +63,38 @@ do{
     number++
 }
 while(number<=10) */
+
+/* for of loop >>this is used to loop through items in an arrrays 
+syntax {
+    for( let item of arrayname){
+        logic to be executed 
+    }
+        for(let count in counts){
+            }
+} */
+
+            let names=["peter","john","michael","james","mary","susan"]
+            for (let name of names){
+                console.log(`the name is ${name}`);
+                
+            }
+
+            /* for ..in {
+                mostly this is used in objects to access the key pair value of the object
+                syntax {
+                    for(let key in object){
+                        logic to be executed 
+                    }
+                }
+            }
+                */
+               let school={
+                name:"Eldohub",
+                student:"Neema",
+                teacher:"Mr. John",
+                class:"fullstack"
+               }
+               for(let key in school){
+                console.log(`the key is ${key} and property is ${school[key]}`);
+                
+               }
