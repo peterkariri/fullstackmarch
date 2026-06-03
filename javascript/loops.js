@@ -27,3 +27,39 @@ forEach
     }
     //TO DECONSTRUCT AN ARRAY USING TEMPORAL STRINGS TO PASS VALUES THAT ARE DYNAMIC
     //  WE USE THE CURLY BRAKCETS WITH THE DOLLLAR SIGN 
+
+/*     the second loop is the while loop and for the while loop we have the following synstax {
+        fisrt we intialize the variable \
+        then we exectute the condition and then the increment 
+        if you forget the increment the conditon executes infinitly untill ram space is depleted 
+        the increment/decrement is used to move to the next iteration or previous iteration for the condition to be satisfied 
+
+    } */
+
+        let countTwo=0
+
+        while(countTwo<=10){
+            console.log(`the count is ${countTwo}`);
+            countTwo += 6
+        }
+/* do..while loop >it executes one code first then checks the condtion 
+{
+it will always execut atleast once 
+
+do (SOMETHING)
+WHILE (CONDITION)
+
+}  */
+let attempts=1
+
+while(attempts<=3){
+    console.log(`the attempt number is ${attempts} ,you have ${3-attempts} attempts left`);
+    attempts++
+}
+
+/* let number=100000
+do{
+    console.log(`the number is ${number}`);
+    number++
+}
+while(number<=10) */
