@@ -98,3 +98,6 @@ syntax {
                 console.log(`the key is ${key} and property is ${school[key]}`);
                 
                }
+
+
+               
