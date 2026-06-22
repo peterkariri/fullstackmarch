@@ -73,3 +73,32 @@ fetchData
     console.log("finally i am done");
     
   })
+
+//using promises 
+  fetch('https://api.restcountries.com/countries/v5') //content is in object  
+  .then(response =>response.json()) //convert the response to JSON
+  .then(data =>console.log(data))
+  .catch()
+
+
+  //using async await (cleaner recommended way)
+  //we define the async functin using the asyn keyword 
+
+  async function getData(){
+    let response=await fetch("https://api.restcountries.com/countries/v5")
+    if(!response){
+        return "error fetching information"
+    }
+    //if response is successful we convert it to json 
+
+    let data=response.json();
+
+    console.log(data);
+    
+  }
+
+  getData()
+
+
+
+  
