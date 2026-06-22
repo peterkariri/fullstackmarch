@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Products</h1>
+    <div class="container"></div>
+
+    <script>
+
+        let container=document.querySelector(".container")
+
+    const products = [
+    {
+        id: 1,
+        name: "Laptop",
+        price: 65000,
+        image: "https://via.placeholder.com/150"
+    },
+    {
+        id: 2,  
+        name: "Phone",
+        price: 25000,
+        image: "https://via.placeholder.com/150"
+    },
+    {
+        id: 3,
+        name: "Headphones",
+        price: 3000,
+        image: "https://via.placeholder.com/150"
+    },
+     {
+        id: 4,
+        name: "Skutta",
+        price: 300343,
+        image: "https://via.placeholder.com/150"
+    }
+];
+//loop through this array using the foreach method 
+//creating a card component that will have the html strucuture 
+
+products.forEach(product =>{
+    let card=document.createElement('div')
+    card.className="card"
+
+    card.innerHTML=`
+     <div>
+        <img src="${product.img}" alt="image of product  ${product.id}">
+        <h1>${product.name}</h1>
+        <p><span>Kshs:${product.price}</span></p>
+    </div>
+    `
+
+    //appending to container
+
+    container.append(card)
+})
+
+
+
+    </script>
+
+    
+</body>
+</html>
