@@ -32,7 +32,30 @@ when you want a downloaded module you require it
 
 const express=require("express");
 const app=express();//will be access by invoking the name app >>when defining paths 
+
+//middlewares >>software  that acts as abridge and enable us us to intergrate applications with opertating systems(disctirbuted system )
+  app.use(express.static("public"))//tracks the public folder in the directory 
 //create a port 
+
+//paths in express are in 
+
+
+//when you are trying to get a file to be read statically we use app.get with a callback function 
+// accepting the req headers and response as parameters we send the file using res.sendfile(filename)
+
+//when sending dynamic files to user we use the res.render 
+
+app.get('/',(req,res)=>{
+    res.sendFile("index.html")
+})
+
+app.get('/cart',(req,res)=>{
+    res.sendFile("cart.html")
+})
+
+
+
+
 
 const port=3000
 //listeni is the method we iuse to invoke the port 
