@@ -1,50 +1,3 @@
-/* node js >>this refers to a  javascript runtimepackange manager that allows us to run 
-javascript outside the browser 
-{
-    how does node js do this??node js is written on top of the crhom v8 engine {
-        compiles and execute js 
-
-        libuv>>this is a C library that gives node js acces ott he operting system allowing it to do file manipulation {
-            FileSystem,networking ,timers event 
-        }
-    }
-express >>this is a light weight framework for node js that make s it easier for routing in web applications 
-pacakge manager 
-module>>this is a javascript file that contains code such as functions ,variables that is resued 
-
-to run node js or any script in javascript we use the node then the server name 
-
-to initialize a node js application we run the command npm init -y/npm i -y{
-package.json 
-
-to initialize an expree project now we run npm i express {
-packagelock.json>>unchages file that has development data
-
-node js is non blocking >>calbacks ,asynchronous programming {
-how do we use node js in express js >>this handles rotuing 
-
-
-}
-}
-}
-when you want a downloaded module you require it 
- */
-
-const express = require("express");
-const path = require("path");
-const app = express(); // will be access by invoking the name app >>when defining paths 
-
-// middlewares >> software that acts as a bridge and enable us to integrate applications with operating systems(distributed system)
-app.use(express.static(path.join(__dirname, "public")));// tracks the public folder in the directory 
-// create a port 
-
-// paths in express are in 
-
-
-// when you are trying to get a file to be read statically we use app.get with a callback function 
-// accepting the req headers and response as parameters we send the file using res.sendFile(filename)
-
-// when sending dynamic files to user we use the res.render 
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"));
@@ -53,12 +6,40 @@ app.get('/', (req, res) => {
 app.get('/cart', (req, res) => {
     res.sendFile(path.join(__dirname, "public", "cart.html"));
 })
+app.get('/profile', (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "profile.html"));
+})
 
+app.set("view engine",'ejs')//sets the view engine to ejs to render dynamic data 
 
+// Sample product data
+let products = [
+    {
+        id: 1,
+        name: "Laptop",
+        price: 50000,
+        category: "Electronics"
+    },
+    {
+        id: 2,
+        name: "Smartphone",
+        price: 15000,
+        category: "Electronics"
+    },
+    {
+        id: 3,
+        name: "Headphones",
+        price: 3000,
+        category: "Accessories"
+    },
+    {
+        id: 4,
+        name: "Keyboard",
+        price: 2500,
+        category: "Accessories"
+    }
+];
 
-
-
-const port=3000
 //listeni is the method we iuse to invoke the port 
 app.listen(port,()=>{
     console.log(`App is listening at port ${port}`);
